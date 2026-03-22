@@ -55,3 +55,93 @@ utils.py
 - **Maintainer:** karthik-idikuda
 - **Documentation Build Date:** 2026-03-22
 - **Visibility:** Public Repository
+
+## Architecture Overview
+
+### Project Type
+- **Primary stack:** Python application
+- **Primary language:** Python
+- **Primary entrypoint/build root:** main module or app script
+
+### High-Level Architecture
+- This repository is organized in modular directories grouped by concern (application code, configuration, scripts, documentation, and assets).
+- Runtime/build artifacts such as virtual environments, node modules, and compiled outputs are intentionally excluded from architecture mapping.
+- The project follows a layered flow: entry point -> domain/application modules -> integrations/data/config.
+
+### Component Breakdown
+- **Application layer:** Core executables, services, UI, or command handlers.
+- **Domain/business layer:** Feature logic and processing modules.
+- **Integration layer:** External APIs, databases, files, or platform-specific connectors.
+- **Support layer:** Config, scripts, docs, tests, and static assets.
+
+### Data/Execution Flow
+1. Start from the configured entrypoint or package scripts.
+2. Route execution into feature-specific modules.
+3. Process domain logic and interact with integrations/storage.
+4. Return results to UI/API/CLI outputs.
+
+### Directory Map (Top-Level + Key Subfolders)
+```
+predictor.py
+hospital_predictor.py
+health_calculator.py
+.DS_Store
+config.py
+gemini_explainer.py
+LICENSE
+requirements.txt
+.streamlit
+.streamlit/config.toml
+.streamlit/secrets.toml
+__pycache__
+README.md
+.gitignore
+utils.py
+app.py
+chatbot.py
+carbon_calculator.py
+generate_pdf.py
+.git
+data_fetcher.py
+```
+
+### Notes
+- Architecture section auto-generated on 2026-03-22 and can be refined further with exact runtime/deployment details.
+
+## Technical Stack
+
+- Core language: Python
+- Primary stack: Python application
+
+## Setup
+
+Typical local setup for Python applications:
+
+1. Ensure Python 3.x is installed.
+2. (Recommended) Create and activate a virtual environment.
+3. Install dependencies if a requirements file is present.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate   # on Windows use: .venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## Running Locally
+
+Start the main application module:
+
+```bash
+python app.py
+
+```
+
+## Testing
+
+If tests are present, they can typically be executed with pytest:
+
+```bash
+pytest
+
+```
+
